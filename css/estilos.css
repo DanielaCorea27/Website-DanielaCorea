@@ -1,0 +1,110 @@
+.color{
+    background-color: #f0f2f5;
+}
+.container{
+    margin-top: -70px;
+}
+
+.imagen {
+    background-image: url('../imagenes/fondo.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#texto-escritura {
+    color: rgba(0, 0, 41, 0.8);
+    margin-top: -10vh;
+    font-size: 20px; /* Tamaño fijo para que funcione la animación */
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    width: 80%;
+    max-width: 800px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 60 5%;
+    box-sizing: border-box;
+    transform-origin: top left;
+}
+
+/* Línea animada */
+.linea {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0ch;
+    opacity: 0;
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    animation: escribir steps(var(--chars)) 1.5s forwards;
+    animation-delay: calc((var(--n) - 1) * 1.6s);
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 1em;
+    width: 2px;
+    background: white;
+    animation: blink .6s steps(1, end) infinite;
+    animation-delay: calc((var(--n) - 1) * 2.5s);
+    opacity: 1;
+}
+
+@keyframes escribir {
+    from {
+        width: 0ch;
+        opacity: 1;
+    }
+    to {
+        width: calc(var(--chars) * 1ch);
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.linea.finished::after {
+    display: none;
+}
+
+
+/* Footer */
+footer {
+    background-color: #000029;
+    height: 100px;
+    align-content: center;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+}
+
+/* 🔁 Media Queries con scale para pantallas pequeñas */
+@media (max-width: 768px) {
+    #texto-escritura {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 480px) {
+    #texto-escritura {
+        transform: scale(0.65);
+    }
+}
+
