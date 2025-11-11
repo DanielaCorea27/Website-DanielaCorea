@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,9 +19,20 @@
 <body class="color">
     <mi-navbar></mi-navbar>
     <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+        }
+
         footer {
-            position: static;
+            position: relative;
             margin-top: 50px;
+            width: 100%;
         }
 
         .card.rounded-4 {
@@ -56,9 +68,8 @@
         }
 
         .card-body {
-            padding: 0rem 1rem;
+            padding: 1rem;
         }
-
 
         .card {
             height: 430px;
@@ -66,24 +77,38 @@
             font-size: 0.9rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            margin: 0 auto;
         }
 
         .card:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
-    </style>
-    <style>
+
         .banner {
             margin-top: 60px;
         }
 
         .final {
-            margin-bottom: -50px;
+            margin-bottom: 0;
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .card {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .banner {
+                margin-top: 40px;
+            }
         }
     </style>
+
     <div align="center" class="banner">
-        <img width=100% src=https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&reversal=true />
+        <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&reversal=true" />
     </div>
 
     <div class="container">
@@ -98,7 +123,6 @@
                                 class="card-img-top rounded-top-4 hover-img position-absolute top-0 start-0 w-100 h-100"
                                 alt="Certificado JavaScript Hover"></a>
                     </div>
-
                     <div class="card-body">
                         <h5 class="card-title">Certificado de JavaScript</h5>
                         <p class="card-text">Plataforma: Microsoft Technology Associate<br>Completado: Abril 2022.</p>
@@ -111,7 +135,6 @@
                 </div>
             </div>
 
-
             <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
                     <div class="image-container position-relative">
@@ -123,7 +146,6 @@
                                 alt="Certificado Python Hover">
                         </a>
                     </div>
-
                     <div class="card-body">
                         <h5 class="card-title">Certificado de Python</h5>
                         <p class="card-text">Plataforma: Microsoft Technology Associate<br>Completado: Junio 2022.</p>
@@ -132,7 +154,6 @@
                             class="btn btn-outline-dark btn-sm">
                             <i class="bi bi-box-arrow-up-right"></i> Ver certificado
                         </a>
-
                     </div>
                 </div>
             </div>
@@ -147,7 +168,6 @@
                                 class="card-img-top rounded-top-4 hover-img position-absolute top-0 start-0 w-100 h-100"
                                 alt="Certificado Excel Hover"></a>
                     </div>
-
                     <div class="card-body">
                         <h5 class="card-title">Certificado de Office Excel 2016</h5>
                         <p class="card-text">Plataforma: Microsoft Office Specialist<br>Completado: Agosto 2022.</p>
@@ -156,14 +176,11 @@
                             class="btn btn-outline-dark btn-sm">
                             <i class="bi bi-box-arrow-up-right"></i> Ver certificado
                         </a>
-
                     </div>
                 </div>
             </div>
-
-
         </div>
-        <br>
+
         <div class="row justify-content-center">
             <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
@@ -176,7 +193,6 @@
                                 alt="Certificado TOEIC:S&W">
                         </a>
                     </div>
-
                     <div class="card-body">
                         <h5 class="card-title">Certificado de TOEIC Speaking and Writing</h5>
                         <p class="card-text">Plataforma: ETS<br>Completado: Diciembre 2022.</p>
@@ -185,7 +201,6 @@
                             class="btn btn-outline-dark btn-sm">
                             <i class="bi bi-box-arrow-up-right"></i> Ver certificado
                         </a>
-
                     </div>
                 </div>
             </div>
@@ -200,7 +215,6 @@
                                 class="card-img-top rounded-top-4 hover-img position-absolute top-0 start-0 w-100 h-100"
                                 alt="Certificado TOEIC:L&R"></a>
                     </div>
-
                     <div class="card-body">
                         <h5 class="card-title">Certificado de TOEIC Listening and Reading</h5>
                         <p class="card-text">Plataforma: ETS<br>Completado: Diciembre 2022.</p>
@@ -209,7 +223,6 @@
                             class="btn btn-outline-dark btn-sm">
                             <i class="bi bi-box-arrow-up-right"></i> Ver certificado
                         </a>
-
                     </div>
                 </div>
             </div>
@@ -219,49 +232,43 @@
                     <div class="image-container position-relative">
                         <a href="https://www.coursera.org/account/accomplishments/records/A0GPGD5DQM8M"><img
                                 src="imagenes/cert5.jpeg" class="card-img-top rounded-top-4 original-img"
-                                alt="Certificado TOEIC:L&R">
+                                alt="Certificado Google">
                             <img src="imagenes/google.jpg"
                                 class="card-img-top rounded-top-4 hover-img position-absolute top-0 start-0 w-100 h-100"
                                 alt="Certificado Google"></a>
                     </div>
-
                     <div class="card-body">
-                        <h5 class="card-title">
-                            The Bits and Bytes of Computer Networking Certification</h5>
+                        <h5 class="card-title">The Bits and Bytes of Computer Networking Certification</h5>
                         <p class="card-text">Plataforma: Coursera<br>Completado: Abril 2025.</p>
                         <hr>
                         <a href="https://www.coursera.org/account/accomplishments/records/A0GPGD5DQM8M"
                             class="btn btn-outline-dark btn-sm">
                             <i class="bi bi-box-arrow-up-right"></i> Ver certificado
                         </a>
-
                     </div>
                 </div>
             </div>
         </div>
-        <br>
+
         <div class="row justify-content-center">
             <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
                     <div class="image-container position-relative">
                         <a href="https://www.coursera.org/account/accomplishments/records/1BTYLN5AUA55"><img
                                 src="imagenes/cert6.jpeg" class="card-img-top rounded-top-4 original-img"
-                                alt="Certificado TOEIC:L&R">
+                                alt="Certificado Google">
                             <img src="imagenes/google.jpg"
                                 class="card-img-top rounded-top-4 hover-img position-absolute top-0 start-0 w-100 h-100"
                                 alt="Certificado Google"></a>
                     </div>
-
                     <div class="card-body">
-                        <h5 class="card-title">
-                            Technical Support Fundamentals Certification</h5>
+                        <h5 class="card-title">Technical Support Fundamentals Certification</h5>
                         <p class="card-text">Plataforma: Coursera<br>Completado: Abril 2025.</p>
                         <hr>
                         <a href="https://www.coursera.org/account/accomplishments/records/1BTYLN5AUA55"
                             class="btn btn-outline-dark btn-sm">
                             <i class="bi bi-box-arrow-up-right"></i> Ver certificado
                         </a>
-
                     </div>
                 </div>
             </div>
@@ -271,22 +278,19 @@
                     <div class="image-container position-relative">
                         <a href="https://www.coursera.org/account/accomplishments/records/I2HH7JW1GP12"><img
                                 src="imagenes/cert7.jpeg" class="card-img-top rounded-top-4 original-img"
-                                alt="Certificado TOEIC:L&R">
+                                alt="Certificado Google">
                             <img src="imagenes/google.jpg"
                                 class="card-img-top rounded-top-4 hover-img position-absolute top-0 start-0 w-100 h-100"
                                 alt="Certificado Google"></a>
                     </div>
-
                     <div class="card-body">
-                        <h5 class="card-title">
-                            Operating Systems and You: Becoming a Power User Certification</h5>
+                        <h5 class="card-title">Operating Systems and You: Becoming a Power User Certification</h5>
                         <p class="card-text">Plataforma: Coursera<br>Completado: Abril 2025.</p>
                         <hr>
                         <a href="https://www.coursera.org/account/accomplishments/records/I2HH7JW1GP12"
                             class="btn btn-outline-dark btn-sm">
                             <i class="bi bi-box-arrow-up-right"></i> Ver certificado
                         </a>
-
                     </div>
                 </div>
             </div>
@@ -296,27 +300,23 @@
                     <div class="image-container position-relative">
                         <a href="https://www.coursera.org/account/accomplishments/records/H3KGP6GDDPMM"><img
                                 src="imagenes/cert8.jpeg" class="card-img-top rounded-top-4 original-img"
-                                alt="Certificado TOEIC:L&R">
+                                alt="Certificado Google">
                             <img src="imagenes/google.jpg"
                                 class="card-img-top rounded-top-4 hover-img position-absolute top-0 start-0 w-100 h-100"
                                 alt="Certificado Google"></a>
                     </div>
-
                     <div class="card-body">
-                        <h5 class="card-title">
-                            System Administration and IT Infrastructure Services Certification</h5>
+                        <h5 class="card-title">System Administration and IT Infrastructure Services Certification</h5>
                         <p class="card-text">Plataforma: Coursera<br>Completado: Abril 2025.</p>
                         <hr>
                         <a href="https://www.coursera.org/account/accomplishments/records/H3KGP6GDDPMM"
                             class="btn btn-outline-dark btn-sm">
                             <i class="bi bi-box-arrow-up-right"></i> Ver certificado
                         </a>
-
                     </div>
                 </div>
             </div>
         </div>
-        <br>
 
         <div class="row justify-content-center">
             <div class="col-sm-6 col-md-4 col-lg-4">
@@ -324,25 +324,24 @@
                     <div class="image-container position-relative">
                         <a href="https://www.coursera.org/account/accomplishments/records/M2NX3OOTPM54"><img
                                 src="imagenes/cert9.jpeg" class="card-img-top rounded-top-4 original-img"
-                                alt="Certificado TOEIC:L&R">
+                                alt="Certificado Google">
                             <img src="imagenes/google.jpg"
                                 class="card-img-top rounded-top-4 hover-img position-absolute top-0 start-0 w-100 h-100"
                                 alt="Certificado Google"></a>
                     </div>
-
                     <div class="card-body">
-                        <h5 class="card-title">
-                            IT Security: Defense against the digital dark arts Certification</h5>
-                        <p class="card-text">Plataforma: Cousera<br>Completado: Mayo 2025.</p>
+                        <h5 class="card-title">IT Security: Defense against the digital dark arts Certification</h5>
+                        <p class="card-text">Plataforma: Coursera<br>Completado: Mayo 2025.</p>
                         <hr>
                         <a href="https://www.coursera.org/account/accomplishments/records/M2NX3OOTPM54"
                             class="btn btn-outline-dark btn-sm">
                             <i class="bi bi-box-arrow-up-right"></i> Ver certificado
                         </a>
-
                     </div>
-                    
-                    <div class="col-sm-6 col-md-4 col-lg-4">
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
                     <div class="image-container position-relative">
                         <a href="https://www.credly.com/badges/71707f7f-e6b1-4667-81ac-7af3f91e1b1a/public_url"><img
@@ -352,17 +351,14 @@
                                 class="card-img-top rounded-top-4 hover-img position-absolute top-0 start-0 w-100 h-100"
                                 alt="Certificado Linux"></a>
                     </div>
-
                     <div class="card-body">
-                        <h5 class="card-title">
-                            Linux Essentials</h5>
+                        <h5 class="card-title">Linux Essentials</h5>
                         <p class="card-text">Plataforma: Cisco Networking Academy<br>Completado: Octubre 2025.</p>
                         <hr>
                         <a href="https://www.credly.com/badges/71707f7f-e6b1-4667-81ac-7af3f91e1b1a/public_url"
                             class="btn btn-outline-dark btn-sm">
                             <i class="bi bi-box-arrow-up-right"></i> Ver certificado
                         </a>
-
                     </div>
                 </div>
             </div>
@@ -376,11 +372,11 @@
             alt="footer" />
     </div>
     <mi-footer></mi-footer>
-</body>
-<!-- Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
 
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
 
 </html>
