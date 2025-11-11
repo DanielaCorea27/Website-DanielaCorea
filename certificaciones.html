@@ -19,19 +19,9 @@
 <body class="color">
     <mi-navbar></mi-navbar>
     <style>
-        body {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .container {
-            flex: 1;
-        }
-
         footer {
-            position: relative;
-            margin-top: 50px;
+            position: static;
+            margin-top: 80px;
             width: 100%;
         }
 
@@ -72,8 +62,9 @@
         }
 
         .card {
-            height: 430px;
-            max-width: 300px;
+            height: auto;
+            min-height: 380px;
+            max-width: 320px;
             font-size: 0.9rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
@@ -91,19 +82,38 @@
 
         .final {
             margin-bottom: 0;
-            margin-top: auto;
+            margin-top: 80px;
+        }
+
+        /* Espaciado entre filas */
+        .row {
+            margin-bottom: 20px;
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .card {
                 max-width: 100%;
-                height: auto;
+                min-height: auto;
+                margin-bottom: 20px;
             }
             
             .banner {
                 margin-top: 40px;
             }
+
+            footer {
+                margin-top: 50px;
+            }
+
+            .final {
+                margin-top: 50px;
+            }
+        }
+
+        /* Asegurar que las columnas tengan espacio */
+        .col-sm-6, .col-md-4, .col-lg-4 {
+            margin-bottom: 30px;
         }
     </style>
 
@@ -111,10 +121,10 @@
         <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&reversal=true" />
     </div>
 
-    <div class="container">
+    <div class="container py-4">
         <div class="row justify-content-center">
             <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
+                <div class="card shadow rounded-4 bg-white text-black">
                     <div class="image-container position-relative">
                         <a href="https://www.credly.com/users/daniela-fernanda-morales-corea"><img
                                 src="imagenes/cert1.png" class="card-img-top rounded-top-4 original-img"
@@ -136,7 +146,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
+                <div class="card shadow rounded-4 bg-white text-black">
                     <div class="image-container position-relative">
                         <a href="https://www.credly.com/users/daniela-fernanda-morales-corea">
                             <img src="imagenes/cert2.png" class="card-img-top rounded-top-4 original-img"
@@ -159,7 +169,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
+                <div class="card shadow rounded-4 bg-white text-black">
                     <div class="image-container position-relative">
                         <a href="https://www.credly.com/users/daniela-fernanda-morales-corea"><img
                                 src="imagenes/cert3.png" class="card-img-top rounded-top-4 original-img"
@@ -183,7 +193,7 @@
 
         <div class="row justify-content-center">
             <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
+                <div class="card shadow rounded-4 bg-white text-black">
                     <div class="image-container position-relative">
                         <a href="https://www.linkedin.com/in/daniela-corea-0a3033267/details/certifications/">
                             <img src="imagenes/cert4.png" class="card-img-top rounded-top-4 original-img"
@@ -206,7 +216,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
+                <div class="card shadow rounded-4 bg-white text-black">
                     <div class="image-container position-relative">
                         <a href="https://www.linkedin.com/in/daniela-corea-0a3033267/details/certifications/"><img
                                 src="imagenes/cert4.png" class="card-img-top rounded-top-4 original-img"
@@ -228,7 +238,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
+                <div class="card shadow rounded-4 bg-white text-black">
                     <div class="image-container position-relative">
                         <a href="https://www.coursera.org/account/accomplishments/records/A0GPGD5DQM8M"><img
                                 src="imagenes/cert5.jpeg" class="card-img-top rounded-top-4 original-img"
@@ -252,7 +262,7 @@
 
         <div class="row justify-content-center">
             <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
+                <div class="card shadow rounded-4 bg-white text-black">
                     <div class="image-container position-relative">
                         <a href="https://www.coursera.org/account/accomplishments/records/1BTYLN5AUA55"><img
                                 src="imagenes/cert6.jpeg" class="card-img-top rounded-top-4 original-img"
@@ -274,7 +284,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
+                <div class="card shadow rounded-4 bg-white text-black">
                     <div class="image-container position-relative">
                         <a href="https://www.coursera.org/account/accomplishments/records/I2HH7JW1GP12"><img
                                 src="imagenes/cert7.jpeg" class="card-img-top rounded-top-4 original-img"
@@ -296,7 +306,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
+                <div class="card shadow rounded-4 bg-white text-black">
                     <div class="image-container position-relative">
                         <a href="https://www.coursera.org/account/accomplishments/records/H3KGP6GDDPMM"><img
                                 src="imagenes/cert8.jpeg" class="card-img-top rounded-top-4 original-img"
@@ -320,7 +330,7 @@
 
         <div class="row justify-content-center">
             <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
+                <div class="card shadow rounded-4 bg-white text-black">
                     <div class="image-container position-relative">
                         <a href="https://www.coursera.org/account/accomplishments/records/M2NX3OOTPM54"><img
                                 src="imagenes/cert9.jpeg" class="card-img-top rounded-top-4 original-img"
@@ -342,7 +352,7 @@
             </div>
 
             <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="card my-4 shadow rounded-4 bg-white text-black h-100 position-relative overflow-hidden">
+                <div class="card shadow rounded-4 bg-white text-black">
                     <div class="image-container position-relative">
                         <a href="https://www.credly.com/badges/71707f7f-e6b1-4667-81ac-7af3f91e1b1a/public_url"><img
                                 src="imagenes/cert10.png" class="card-img-top rounded-top-4 original-img"
